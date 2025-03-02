@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,11 +7,444 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="./assets/css/output.css" />
 
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
 
     <title>Sign Up | Obito</title>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold text-red-500">Hello World</h1>
+  <body class="bg-background">
+    <div class="relative max-h-screen min-h-screen overflow-hidden">
+      <!-- Navigation -->
+      <header class="border-muted relative z-10 border-b bg-white">
+        <div class="container flex items-center justify-between py-5">
+          <div class="flex items-center space-x-12">
+            <!-- Logo -->
+            <a href="/" class="flex items-center">
+              <div class="relative mr-1.5 size-10">
+                <img src="./assets/logo.png" alt="obito" class="size-10" />
+              </div>
+              <span class="text-foreground text-2xl font-extrabold">Obito</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden items-center space-x-10 md:flex">
+              <a
+                href="/"
+                class="text-foreground hover:text-primary font-semibold transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/pricing"
+                class="text-foreground hover:text-primary transition-colors"
+              >
+                Pricing
+              </a>
+              <a
+                href="/features"
+                class="text-foreground hover:text-primary transition-colors"
+              >
+                Features
+              </a>
+              <a
+                href="/testimonials"
+                class="text-foreground hover:text-primary transition-colors"
+              >
+                Testimonials
+              </a>
+            </nav>
+          </div>
+
+          <button
+            class="hover:bg-primary/20 rounded-full p-2 transition-colors hover:cursor-pointer lg:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+
+          <div class="hidden items-center space-x-5 lg:flex">
+            <button
+              class="text-foreground hover:bg-primary/20 rounded-full p-2 transition-colors hover:cursor-pointer"
+            >
+              <svg
+                class="size-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12.2V13.9C20 17.05 18.2 18.4 15.5 18.4H6.5C3.8 18.4 2 17.05 2 13.9V8.5C2 5.35 3.8 4 6.5 4H9.2C9.07 4.38 9 4.8 9 5.25V9.15002C9 10.12 9.32 10.94 9.89 11.51C10.46 12.08 11.28 12.4 12.25 12.4V13.79C12.25 14.3 12.83 14.61 13.26 14.33L16.15 12.4H18.75C19.2 12.4 19.62 12.33 20 12.2Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 5.25V9.15002C22 10.64 21.24 11.76 20 12.2C19.62 12.33 19.2 12.4 18.75 12.4H16.15L13.26 14.33C12.83 14.61 12.25 14.3 12.25 13.79V12.4C11.28 12.4 10.46 12.08 9.89 11.51C9.32 10.94 9 10.12 9 9.15002V5.25C9 4.8 9.07 4.38 9.2 4C9.64 2.76 10.76 2 12.25 2H18.75C20.7 2 22 3.3 22 5.25Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.39999 22H14.6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11 18.4V22"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.4955 7.25H18.5045"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.6957 7.25H15.7047"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.8954 7.25H12.9044"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="bg-muted h-[50px] w-[1px]"></div>
+            <div class="flex items-center space-x-3">
+              <a
+                href="/signup"
+                class="border-muted text-foreground hover:bg-primary/90 rounded-full border px-5 py-3 font-semibold transition-colors hover:text-white"
+              >
+                Sign Up
+              </a>
+              <a
+                href="/account"
+                class="bg-primary hover:bg-primary/90 rounded-full px-5 py-3 font-semibold text-white transition-colors"
+              >
+                My Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- #Navigation -->
+
+      <!-- Main -->
+      <main class="container grid lg:grid-cols-2 items-center lg:space-x-12 pt-12">
+        <!-- Form -->
+        <div class="border-muted rounded-[20px] border bg-white p-5">
+          <h1 class="text-foreground mb-4 text-2xl font-bold">
+            Upgrade Your Skills
+          </h1>
+
+          <div class="relative mb-4 flex items-center space-x-3">
+            <div
+              class="border-muted relative flex size-[90px] items-center justify-center overflow-hidden rounded-full border-2 hover:cursor-pointer"
+            >
+              <image
+                src="/placeholder.svg?height=96&width=96"
+                alt="Profile photo"
+                class="hidden h-full w-full object-cover"
+              />
+              <span class="text-sm font-semibold">Add Photo</span>
+            </div>
+            <button
+              class="bg-danger-surface text-danger rounded-full px-2.5 py-1.5 text-xs font-bold uppercase"
+            >
+              DELETE PHOTO
+            </button>
+          </div>
+
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="text-foreground mb-2 block">
+                Complete Name
+              </label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5"
+                >
+                  <svg
+                    class="text-foreground size-5"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.1334 9.05833C10.05 9.05 9.95005 9.05 9.85838 9.05833C7.87505 8.99166 6.30005 7.36666 6.30005 5.36666C6.30005 3.325 7.95005 1.66666 10 1.66666C12.0417 1.66666 13.7 3.325 13.7 5.36666C13.6917 7.36666 12.1167 8.99166 10.1334 9.05833Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.96672 12.1333C3.95006 13.4833 3.95006 15.6833 5.96672 17.025C8.25839 18.5583 12.0167 18.5583 14.3084 17.025C16.3251 15.675 16.3251 13.475 14.3084 12.1333C12.0251 10.6083 8.26672 10.6083 5.96672 12.1333Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Type your full name"
+                  class="border-muted focus:ring-primary w-full rounded-full border p-3.5 pl-12 font-semibold placeholder:font-normal focus:ring-1 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="occupation" class="text-foreground mb-2 block">
+                Occupation
+              </label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5"
+                >
+                  <svg
+                    class="text-foreground size-5"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.66673 18.3333H13.3334C16.6834 18.3333 17.2834 16.9917 17.4584 15.3583L18.0834 8.69167C18.3084 6.65833 17.7251 5 14.1667 5H5.83339C2.27506 5 1.69173 6.65833 1.91673 8.69167L2.54173 15.3583C2.71673 16.9917 3.31673 18.3333 6.66673 18.3333Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.66663 5V4.33333C6.66663 2.85833 6.66663 1.66667 9.33329 1.66667H10.6666C13.3333 1.66667 13.3333 2.85833 13.3333 4.33333V5"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.6667 10.8333V11.6667C11.6667 11.675 11.6667 11.675 11.6667 11.6833C11.6667 12.5917 11.6584 13.3333 10 13.3333C8.35004 13.3333 8.33337 12.6 8.33337 11.6917V10.8333C8.33337 10 8.33337 10 9.16671 10H10.8334C11.6667 10 11.6667 10 11.6667 10.8333Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.0416 9.16667C16.1166 10.5667 13.9166 11.4 11.6666 11.6833"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.18335 9.39167C4.05835 10.675 6.17502 11.45 8.33335 11.6917"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="occupation"
+                  value="Programmer"
+                  class="border-muted focus:ring-primary w-full rounded-full border p-3.5 pl-12 font-semibold placeholder:font-normal focus:ring-1 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="text-foreground mb-2 block">
+                Email Address
+              </label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5"
+                >
+                  <svg
+                    class="text-foreground size-5"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.1666 17.0833H5.83329C3.33329 17.0833 1.66663 15.8333 1.66663 12.9167V7.08333C1.66663 4.16666 3.33329 2.91666 5.83329 2.91666H14.1666C16.6666 2.91666 18.3333 4.16666 18.3333 7.08333V12.9167C18.3333 15.8333 16.6666 17.0833 14.1666 17.0833Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14.1667 7.5L11.5584 9.58333C10.7 10.2667 9.2917 10.2667 8.43337 9.58333L5.83337 7.5"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Type your valid email address"
+                  class="border-muted focus:ring-primary w-full rounded-full border p-3.5 pl-12 font-semibold placeholder:font-normal focus:ring-1 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="password" class="text-foreground mb-2 block">
+                Password
+              </label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5"
+                >
+                  <svg
+                    class="text-foreground size-5"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.74167 1.85833L4.58334 3.425C3.62501 3.78333 2.84167 4.91666 2.84167 5.93333V12.125C2.84167 13.1083 3.49167 14.4 4.28334 14.9917L7.86667 17.6667C9.04167 18.55 10.975 18.55 12.15 17.6667L15.7333 14.9917C16.525 14.4 17.175 13.1083 17.175 12.125V5.93333C17.175 4.90833 16.3917 3.775 15.4333 3.41666L11.275 1.85833C10.5667 1.6 9.43334 1.6 8.74167 1.85833Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 10.4167C10.9205 10.4167 11.6667 9.67047 11.6667 8.74999C11.6667 7.82952 10.9205 7.08333 10 7.08333C9.07957 7.08333 8.33337 7.82952 8.33337 8.74999C8.33337 9.67047 9.07957 10.4167 10 10.4167Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 10.4167V12.9167"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Type your password"
+                  class="border-muted focus:ring-primary w-full rounded-full border p-3.5 pl-12 font-semibold placeholder:font-normal focus:ring-1 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="confirm-password" class="text-foreground mb-2 block">
+                Confirm Password
+              </label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5"
+                >
+                  <svg
+                    class="text-foreground size-5"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.74167 1.85833L4.58334 3.425C3.62501 3.78333 2.84167 4.91666 2.84167 5.93333V12.125C2.84167 13.1083 3.49167 14.4 4.28334 14.9917L7.86667 17.6667C9.04167 18.55 10.975 18.55 12.15 17.6667L15.7333 14.9917C16.525 14.4 17.175 13.1083 17.175 12.125V5.93333C17.175 4.90833 16.3917 3.775 15.4333 3.41666L11.275 1.85833C10.5667 1.6 9.43334 1.6 8.74167 1.85833Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 10.4167C10.9205 10.4167 11.6667 9.67047 11.6667 8.74999C11.6667 7.82952 10.9205 7.08333 10 7.08333C9.07957 7.08333 8.33337 7.82952 8.33337 8.74999C8.33337 9.67047 9.07957 10.4167 10 10.4167Z"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 10.4167V12.9167"
+                      stroke="#0A0723"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  placeholder="Type again your password"
+                  class="border-muted focus:ring-primary w-full rounded-full border p-3.5 pl-12 font-semibold placeholder:font-normal focus:ring-1 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="bg-primary hover:bg-primary/90 w-full rounded-full py-3.5 font-semibold text-white transition-colors"
+            >
+              Create My Account
+            </button>
+          </form>
+        </div>
+
+        <!-- Image -->
+        <div class="hidden lg:block">
+          <image
+            src="./assets/images/signup_banner.png"
+            alt="Developers collaborating"
+            class="absolute top-10 right-0 bottom-0 h-full w-1/2 object-cover"
+          />
+        </div>
+      </main>
+      <!-- #Main -->
+    </div>
   </body>
 </html>
